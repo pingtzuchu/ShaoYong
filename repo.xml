@@ -10,7 +10,7 @@
     <target>shaoyong</target>
     <prepare>pre-install.xql</prepare>
     <finish/>
-    <permissions user="admin" group="dba" mode="rw-rw-r--"/>
+    <permissions xmlns:repo="http://exist-db.org/xquery/repo" password="" user="admin" group="dba" mode="rw-rw-r--"/>
 
-<deployed>2017-07-04T14:28:32.054+08:00</deployed>
+
 </meta>

@@ -14,6 +14,16 @@ declare namespace expath="http://expath.org/ns/pkg";
 (: 
     Determine the application root collection from the current module load path.
 :)
+declare function config:homepage(){
+    <div>
+        <div class="page-header">
+            <h1>邵雍研究網</h1>
+        </div>
+        <div class="alert alert-success">
+            <p>歡迎參觀本網站。本網站的設立宗旨，在於探究數位人文的方法對於邵雍文化思想遺產的研究。</p>
+            <p>請依照右邊的說明進行操作，或直接點選選單上的功能探勘本站的資源。</p>
+        </div>
+    </div>};
 declare variable $config:app-root := 
     let $rawPath := system:get-module-load-path()
     let $modulePath :=
