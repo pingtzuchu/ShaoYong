@@ -8,7 +8,7 @@ import module namespace web="http://exist-db.org/apps/shaoyong/web" at "web.xqm"
 import module namespace functx="http://www.functx.com" at "functx.xql";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
-declare function app:getParameters($node as node(), $model as map(*), $titleId as xs:string?, $path as xs:string?, $mode as xs:integer?){
+declare function app:getParameters($node as node(), $model as map(*), $titleId as xs:string?, $path as xs:string?, $mode as xs:integer?, $coll as xs:string?){
     let $titleNode :=
         if ($titleId) then
             if ($coll) then
@@ -48,8 +48,7 @@ declare function app:left($node as node(), $model as map(*)){
                     {app:firstDiv($model)}
                 </div>
             else
-                config:homepage()
-
+                $web:homepage
     return $result
 };
 declare function app:divPath($node as node(), $path as xs:string?)as node(){
